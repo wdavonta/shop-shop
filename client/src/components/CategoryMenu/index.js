@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { useQuery } from '@apollo/react-hooks';
-import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
-import { QUERY_CATEGORIES } from '../../utils/queries';
-import { idbPromise } from '../../utils/helpers';
-import { useDispatch, useSelector } from 'react-dedux';
+import { QUERY_CATEGORIES } from "../../utils/queries";
+import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from "../../utils/actions";
+import { idbPromise } from "../../utils/helpers";
+import { useDispatch, useSelector } from 'react-redux';
 
 function CategoryMenu() {
   const state = useSelector((state) => {
@@ -11,7 +11,7 @@ function CategoryMenu() {
 
   });
 
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
 
   const { categories } = state;
 
